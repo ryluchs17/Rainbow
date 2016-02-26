@@ -16,7 +16,7 @@ public class Rainbow extends JFrame implements ActionListener{
 	
 	private static final long serialVersionUID = 1;
 	
-	private int x = 5; private int y = 5; 
+	private int x = 10; private int y = 10; 
 	private JLabel[] tiles =  new JLabel[x*y];
 	
 	private Random gen = new Random();
@@ -30,7 +30,7 @@ public class Rainbow extends JFrame implements ActionListener{
 	private JButton changeColors;
 	
 	public Rainbow() {
-		super("Image Test");
+		super("Rainbow");
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(new BorderLayout());
@@ -43,7 +43,7 @@ public class Rainbow extends JFrame implements ActionListener{
 		for(int i = 0; i < x*y; i++) {
 			tiles[i] =  new JLabel("Why?!");
 			tiles[i].setForeground(RAINBOW[gen.nextInt(7)]);
-			tiles[i].setFont(new Font("Monospace", Font.BOLD, 125));
+			tiles[i].setFont(new Font("Monospace", Font.BOLD, 12));
 			gridPanel.add(tiles[i]);
 		}
 		add(gridPanel, BorderLayout.CENTER);
@@ -51,7 +51,7 @@ public class Rainbow extends JFrame implements ActionListener{
 		// Setup Controls
 		controlPanel.setLayout(new FlowLayout());
 		
-		setGridText = new JTextField("aeiou", 5);
+		setGridText = new JTextField("aeiou", 10);
 		controlPanel.add(setGridText);
 		
 		changeText = new JButton("Change Text");
