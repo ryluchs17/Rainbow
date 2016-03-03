@@ -74,6 +74,7 @@ public class Rainbow extends JFrame implements ActionListener{
 		JButton button  = (JButton)e.getSource();
 		if(button.getText().equals("Change Colors")) {
 			sparkle();
+			changeColors.setBackground(RAINBOW[gen.nextInt(7)]);
 		} else {
 			for(int i = 0; i < x*y; i++) {
 				tiles[i].setText(setGridText.getText());
